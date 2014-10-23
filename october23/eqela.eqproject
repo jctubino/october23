@@ -1,0 +1,9 @@
+
+#
+# Project configuration file for
+# October23
+#
+
+projectname: October23
+vendorid: com.tubino
+mainmodule: com.tubino.october23
