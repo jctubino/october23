@@ -17,6 +17,7 @@ public class MainScene : SEScene
 		base.initialize(rsc);
 		w = get_scene_width();
 		h = get_scene_height();
+		AudioClipManager.prepare("sound");
 		x=0;
 		y=0;
 		add_entity(SESpriteEntity.for_color(Color.instance("white"),w,h));
@@ -28,8 +29,7 @@ public class MainScene : SEScene
 			add_entity(new MonsterEntity());
 		}
 		add_entity(new PlayerEntity());
-		AudioClipManager.prepare("");
-		AudioClipManager.play("");
+		AudioClipManager.play("sound");
 	}
 
 	public void on_pointer_move(SEPointerInfo pi)
