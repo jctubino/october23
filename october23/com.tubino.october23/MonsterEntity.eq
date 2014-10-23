@@ -14,6 +14,7 @@ public class MonsterEntity : SEEntity
 	int my;
 	int p_x;
 	int py;
+	SESprite text;
 	
 	public void initialize(SEResourceCache rsc)
 	{
@@ -35,13 +36,12 @@ public class MonsterEntity : SEEntity
 		base.tick(now,delta);
 		monster.move(mx+(p_x-mx)/20,my+(py-my)/20);
 
-		if(mx/p_x=1 || my/py =1)
-		{
-			
-		}
-		
+		 if((mx/p_x)==1 && (my/py)==1){
+            text.set_text("GAME OVER!");
+            text.move(0.35*w, 0.45*h);
+			}
 
-	}	
+	}
 
 	public void cleanup()
 	{

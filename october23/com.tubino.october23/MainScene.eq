@@ -23,7 +23,7 @@ public class MainScene : SEScene
 		rsc.prepare_image("galaxy","galaxy", w, h);
 		bg = add_sprite_for_image(SEImage.for_resource("galaxy"));
 		bg.move(0,0);
-		for(i=0;i<Math.random(5,20);i++)
+		for(i=0;i<Math.random(1,3);i++)
 		{
 			add_entity(new MonsterEntity());
 		}
